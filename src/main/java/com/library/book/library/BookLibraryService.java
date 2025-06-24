@@ -44,3 +44,19 @@ public class BookLibraryService {
     }
 }
 
+//# BookLibraryRestApi Application
+//
+//        Spring Boot REST API application for managing books in a library.
+//
+//        Features: add,fetch,delete,fetch all books from library etc.
+//
+//        Tech Stack- Java17,SpringBoot,JPA,Maven,Mysql DB,Swagger etc.
+//
+//        instructions- checkout out project from github in your IDE like intellij, setup MySql Db(Oracle SQl developer) and provide db config in properties file,
+//        compile and run application .once tomcate server started you can hit api's curl via postman and test.
+//
+//        Postman  collection are attaching for GET,POST,PUT,DELETE operations.
+
+
+
+//
