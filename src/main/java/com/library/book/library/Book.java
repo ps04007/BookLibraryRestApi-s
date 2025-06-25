@@ -12,9 +12,20 @@ public class Book {
     private Long id;
 
     private String title;
+
+    public String getErrorResponse() {
+        return errorResponse;
+    }
+
+    public void setErrorResponse(String errorResponse) {
+        this.errorResponse = errorResponse;
+    }
+
     private String author;
     private String isbn;
     private Date publishedDate;
+
+    private String errorResponse;
 
     public Book(String title, String author, String isbn, Date publishedDate) {
         this.title = title;
