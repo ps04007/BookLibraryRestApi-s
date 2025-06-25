@@ -25,18 +25,18 @@ public class BookLibraryController {
     }
 
     @GetMapping("/books/{id}")
-    public Book getBookById(@PathVariable Long id) {
+    public ResponseEntity<Book> getBookById(@PathVariable Long id) {
         return bookLibraryService.getBookById(id);
     }
 
     @PostMapping("/books")
-    public Book createBook(@Valid @RequestBody Book book) {
+    public ResponseEntity<Book> createBook(@Valid @RequestBody Book book) throws InvalidIsbnException {
 
         return bookLibraryService.createBook(book);
     }
 
     @PutMapping("/books/{id}")
-    public Book updateBook(@PathVariable Long id, @Valid @RequestBody Book book) {
+    public ResponseEntity<Book> updateBook(@PathVariable Long id, @Valid @RequestBody Book book) throws Exception {
         return bookLibraryService.updateBook(id, book);
     }
 

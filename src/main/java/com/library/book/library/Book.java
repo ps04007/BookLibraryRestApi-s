@@ -12,26 +12,21 @@ public class Book {
     private Long id;
 
     private String title;
-
-    public String getErrorResponse() {
-        return errorResponse;
-    }
-
-    public void setErrorResponse(String errorResponse) {
-        this.errorResponse = errorResponse;
-    }
-
     private String author;
+
+    @Column(unique = true)
     private String isbn;
+
     private Date publishedDate;
 
-    private String errorResponse;
+    private String statusCode;
 
-    public Book(String title, String author, String isbn, Date publishedDate) {
+    public Book(String title, String author, String isbn, Date publishedDate,String statusCode) {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
         this.publishedDate = publishedDate;
+        this.statusCode=statusCode;
 
     }
 
@@ -63,6 +58,14 @@ public class Book {
 
     public String getIsbn() {
         return isbn;
+    }
+
+    public String getStatusCode() {
+        return statusCode;
+    }
+
+    public void setStatusCode(String statusCode) {
+        this.statusCode = statusCode;
     }
 
     public void setIsbn(String isbn) {
