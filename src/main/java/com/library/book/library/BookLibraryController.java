@@ -4,6 +4,7 @@ import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,6 +18,7 @@ public class BookLibraryController {
 
     @Autowired
     BookLibraryService bookLibraryService;
+
 
     @GetMapping("/books")
     public List<Book> getAllBooks() {
@@ -41,9 +43,9 @@ public class BookLibraryController {
     }
 
     @DeleteMapping("/books/{id}")
-    public String deleteBook(@PathVariable Long id) {
+    public ResponseEntity<String> deleteBook(@PathVariable Long id) {
          bookLibraryService.deleteBookById(id);
-         return ResponseEntity.ok("book deleted successfully").toString();
+         return new ResponseEntity<>("Book deleted successfully", HttpStatusCode.valueOf(200));
 
     }
 }

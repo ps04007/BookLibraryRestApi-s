@@ -2,6 +2,7 @@ package com.library.book.library;
 
 import lombok.Data;
 
+
 @Data
 public class ErrorResponse {
 
@@ -15,6 +16,31 @@ public class ErrorResponse {
         this.statusCode=statusCode;
 
     }
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+    }
+
+    public String getErrorCode() {
+        return errorCode;
+    }
+
+    public void setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+    }
+
+    public String getStatusCode() {
+        return statusCode;
+    }
+
+    public void setStatusCode(String statusCode) {
+        this.statusCode = statusCode;
+    }
+    public ErrorResponse() {}
 
 
 
